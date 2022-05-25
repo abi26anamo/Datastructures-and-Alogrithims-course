@@ -78,36 +78,16 @@ class LinkedList:
             current = prev.next
             prev.next = current.next
             return current.data
-            
-            
+    def reverse(self):
+        prev = None
+        current = self.head
 
-
-
-
-            
-
-
-
-            
-            
-            
-        
-
-
-            
-        
-
-
-                
-
-
-
-
-
-
-
-
-
+        while current is not None:
+            nextTocurrent = current.next
+            current.next = prev
+            prev = current
+            current = nextTocurrent
+        self.head = prev
 
     def print(self):
         if self.head is None:
@@ -132,6 +112,8 @@ if __name__ == "__main__":
     linkedlst.addLast(8)
     linkedlst.add(2,78)
     linkedlst.remove(2)
+    linkedlst.print()
+    linkedlst.reverse()
     
     
     

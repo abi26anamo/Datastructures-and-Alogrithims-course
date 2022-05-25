@@ -8,9 +8,9 @@ def mergeSort(lst):
          merge(firsthalf,secondhalf,lst)
 
 def merge(lst1,lst2,lstSorted):
-    i=0;
-    j=0;
-    k=0;
+    i=0
+    j=0
+    k=0
 
     while i < len(lst1) and j < len(lst2):
         if lst1[i] < lst2[j]:
